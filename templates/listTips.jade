@@ -1,0 +1,7 @@
+extends layout.jade
+
+block content
+    each item in contents.data['tips.json'].metadata     
+        div.row
+            a(href='view/tip.html')
+                = item.text

@@ -1,0 +1,12 @@
+extends layout.jade
+
+block content
+    each item in contents.data['restaurants.json'].metadata     
+        div.row
+            div.eight.columns
+                a(href='view/restaurant.html')
+                    = item.name
+            div.four.columns
+                = item.stars
+                |  stars
+

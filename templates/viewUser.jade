@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    // display the detail of the first item
+    - var item = contents.data['users.json'].metadata[0]
+    h3= item.name
+    div.row
+        div.three.columns= item.name

@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    // display the detail of the first item
+    - var item = contents.data['doctors.json'].metadata[0]
+    h3= item.name
+    div.row
+        div.one.column city
+        div.three.columns= item.city
+        div.one.column state
+        div.three.columns= item.state

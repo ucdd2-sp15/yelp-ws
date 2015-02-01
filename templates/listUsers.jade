@@ -1,0 +1,7 @@
+extends layout.jade
+
+block content
+    each item in contents.data['users.json'].metadata     
+        div.row
+            a(href='view/user.html')
+                = item.name

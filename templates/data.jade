@@ -1,0 +1,11 @@
+extends layout.jade
+
+block content
+	h3 Restaurant
+	pre!= JSON.stringify(contents.data['restaurants.json'].metadata[0], null,'    ')
+	h3 Doctor
+	pre!= JSON.stringify(contents.data['doctors.json'].metadata[0], null,'    ')
+	h3 Tip
+	pre!= JSON.stringify(contents.data['tips.json'].metadata[0], null,'    ')
+	h3 User
+	pre!= JSON.stringify(contents.data['users.json'].metadata[0], null,'    ')	
