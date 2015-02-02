@@ -1,12 +1,32 @@
 extends layout.jade
 
 block content
+    div.row
+        div.four.columns
+            strong= "Name"
+        div.two.columns
+            strong= "City"
+        div.two.columns
+            strong= "State"
+        div.two.columns
+            strong= "Price Range"
+        div.two.columns
+            strong= "Stars"
     each item in contents.data['restaurants.json'].metadata     
         div.row
-            div.eight.columns
+            div.four.columns
                 a(href='view/restaurant.html')
                     = item.name
-            div.four.columns
+            div.two.columns
+                = item.city
+            div.two.columns
+                = item.state
+            div.two.columns
+                if item.attributes["Price Range"]
+                    = item.attributes["Price Range"]
+                else
+                    ="No Data"
+            div.two.columns
                 = item.stars
                 |  stars
 
