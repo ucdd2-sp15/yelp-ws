@@ -1,7 +1,6 @@
 extends layout
 
 block content
-    // display the detail of the first item
     - var item = contents.data['restaurants.json'].metadata[0]
     h3= item.name
     div.row
@@ -9,3 +8,17 @@ block content
         div.three.columns= item.city
         div.one.column state
         div.three.columns= item.state
+    | &nbsp;
+    div.row 
+        div.three.columns = "image"
+    | &nbsp;
+    each item in contents.data['restaurants.json'].metadata
+        div.row
+            div.four.columns
+                a(href='view/restaurant.html')
+                    = 'user name'
+            div.two.columns 
+                = 'comment/review'
+            div.four.columns
+                = item.stars
+                |  stars
