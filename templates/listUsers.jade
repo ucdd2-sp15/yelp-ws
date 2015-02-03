@@ -1,7 +1,19 @@
 extends layout.jade
-
 block content
-    each item in contents.data['users.json'].metadata     
-        div.row
-            a(href='view/user.html')
-                = item.name
+    div.blue-container
+        div.white-container
+            table.u-full-width
+                thead
+                    tr
+                        th Name
+                        th Review Count
+                        th Fans
+                        th Average Stars
+                tbody
+                    each item in contents.data['users.json'].metadata
+                        tr
+                            td
+                                a(href='view/user.html') #{item.name}
+                            td= item.review_count
+                            td= item.fans
+                            td= item.average_stars
