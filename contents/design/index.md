@@ -9,6 +9,8 @@ template: index.jade
 
 # View a Restaurant
 
+![sketch](view-restaurants-sketch.jpg)
+
 # List Doctors
 
 ![sketch](list-doctors-sketch.jpg)

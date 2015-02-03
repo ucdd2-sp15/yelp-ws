@@ -54,7 +54,8 @@
         "Good For Groups": true,
         "Price Range": 1
     },
-    "type": "business"
+    "type": "business",
+    "image": "pine_cone.jpg"
 }, {
     "business_id": "uGykseHzyS5xAMWoN6YUqA",
     "full_address": "505 W North St\nDe Forest, WI 53532",
@@ -130,7 +131,7 @@
             "divey": false,
             "classy": false,
             "trendy": false,
-            "upscale": false,
+            "upscale": true,
             "casual": true
         },
         "Waiter Service": true,
@@ -139,7 +140,8 @@
         "Good For Groups": true,
         "Price Range": 1
     },
-    "type": "business"
+    "type": "business",
+    "image": "pine_cone.jpg"
 }, {
 
     "business_id": "LRKJF43s9-3jG9Lgx4zODg",
