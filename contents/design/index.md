@@ -23,6 +23,7 @@ template: index.jade
 ![sketch](list-tips-sketch.jpg)
 
 # View a Tip
+![sketch](view-tip-sketch.jpg)
 
 # List Users
 
