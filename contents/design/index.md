@@ -4,22 +4,13 @@ template: index.jade
 ---
 
 # List Restaurants
-
-![sketch](list-restaurants-sketch.png)
-
-(Replace this sketch with your team's sketch)
-
 # View a Restaurant
 
-# List Doctors
+![sketch](sketch1.JPG)
 
+# List Doctors
 # View a Doctor
 
-# List Tips
+![sketch](sketch2.JPG)
 
-# View a Tip
-
-# List Users
-
-# View a User
 
