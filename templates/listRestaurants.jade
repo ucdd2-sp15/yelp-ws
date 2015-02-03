@@ -1,12 +1,24 @@
 extends layout.jade
 
 block content
-    each item in contents.data['restaurants.json'].metadata     
-        div.row
-            div.eight.columns
-                a(href='view/restaurant.html')
-                    = item.name
-            div.four.columns
-                = item.stars
-                |  stars
+	div.row
+		div.three.columns
+			br
+		div.six.columns
+			br
+			h1 Restaurants
+			br
+			
+	each item in contents.data['restaurants.json'].metadata     
+		div.row
+			div.two.columns
+				img(src='images/rest.png')
+			div.four.columns
+				a(href='view/restaurant.html')
+					= item.name
+			div.three.columns
+				=item.city+', '+item.state
+			div.two.columns(style='color:black')
+				h4 &#10029&#10029&#10029&#10029
+					
 
