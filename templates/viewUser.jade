@@ -4,5 +4,28 @@ block content
     // display the detail of the first item
     - var item = contents.data['users.json'].metadata[0]
     h3= item.name
-    div.row
-        div.three.columns= item.name
+    div
+        div.row
+            div.three.columns
+                div.row
+                    div.three.columns(style="width: 200px;")
+                      img(src='design/userphoto.png')
+                div.row
+                    div.three.columns(style="width: 200px;")
+                      = "funny: " + item.votes.funny + " useful: " + item.votes.useful + " cool: " + item.votes.cool
+                div.row
+                    div.three.columns(style="width: 200px;")
+                      = "Average Stars: " + item.average_stars
+            div.nine.columns
+                div.row
+                    div.three.columns= "Yelping since " + item.yelping_since
+                    div.six.columns= "User ID: " + item.user_id 
+                div.row
+                    div.three.columns= "type: " + item.type
+                    div.six.columns= "fans: " + item.fans
+//                div.row
+                    div.nine.columns= item.compliments
+                div.row
+                    div.nine.columns friends
+                div.row
+//-                    div.nine.columns elite
