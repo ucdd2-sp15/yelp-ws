@@ -4,8 +4,20 @@ block content
     // display the detail of the first item
     - var item = contents.data['doctors.json'].metadata[0]
     h3= item.name
-    div.row
-        div.one.column city
-        div.three.columns= item.city
-        div.one.column state
-        div.three.columns= item.state
+    h5= item.full_address
+    div#example-grid
+        div.row
+            div.two.columns Hours
+            for j in item.hours
+                div.two.columns= j.open + "-" + j.close
+        div.row
+            div.four.columns= "Practices: " + item.categories[0] + " and " + item.categories[1]
+        div.row
+            div.four.columns= "Scheduled Appointments Required: true"
+        div.row
+            div.two.columns= "Reviews: " + item.review_count
+            div.two.columns= "Stars: " + item.stars
+        div.row
+            div.two.columns Coordinates
+            div.three.columns= "Longitude " + item.longitude
+            div.three.columns= "Latitude " + item.latitude

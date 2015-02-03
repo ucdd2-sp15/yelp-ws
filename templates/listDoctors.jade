@@ -1,11 +1,23 @@
 extends layout.jade
 
 block content
+  div#example-grid
+    div.row(style='font-family:Comic Sans MS;font-size:150%')
+            div.three.columns
+                | Doctor Name
+            div.three.columns
+                | Appointment
+            div.three.columns
+                | Review
+            
+
     each item in contents.data['doctors.json'].metadata     
         div.row
-            div.eight.columns
+            div.three.columns
                a(href='view/doctor.html')
                     = item.name
-            div.four.columns
+            div.three.columns
                 if (item.attributes["By Appointment Only"])
                     | By Appointment Only
+            div.three.columns
+                = item.review_count

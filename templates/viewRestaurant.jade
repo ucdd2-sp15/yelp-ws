@@ -4,8 +4,41 @@ block content
     // display the detail of the first item
     - var item = contents.data['restaurants.json'].metadata[0]
     h3= item.name
-    div.row
-        div.one.column city
-        div.three.columns= item.city
-        div.one.column state
-        div.three.columns= item.state
+    span
+      b= "Located at:  "
+      span= item.full_address
+    br
+    br
+    table.u-full-width
+      thead
+        tr
+          th City, State
+          th Stars
+          th Take-out?
+          th Accepts cards?
+          th Caters?
+          th Alcohol?
+      tbody
+        tr
+          td= item.city + ", " + item.state
+          td  
+            span
+              i.fa.fa-spin
+                i.fa.fa-star.fa-lg
+            span
+              i.fa.fa-spin
+                i.fa.fa-star.fa-lg
+            span
+              i.fa.fa-spin
+                i.fa.fa-star.fa-lg
+            span
+              i.fa.fa-spin
+                i.fa.fa-star.fa-lg
+          td 
+            i.fa.fa-check.fa-lg
+          td
+              i.fa.fa-check.fa-lg
+          td
+              i.fa.fa-close.fa-lg
+          td
+              i.fa.fa-close.fa-lg

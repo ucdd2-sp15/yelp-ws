@@ -12,8 +12,9 @@ img {
 }
 
 #example-grid .columns, #example-grid .column{
-	background-color: #eee;
-	border-radius: 4px;
+	background-color: yellow;
+	/*background: url(123.jpg);*/
+	border-radius: 5px;
 	margin-bottom: 3px;
 	border: 1px #aaa solid;
 	padding: 2px;

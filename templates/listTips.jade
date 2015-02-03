@@ -1,7 +1,14 @@
 extends layout.jade
 
 block content
-    each item in contents.data['tips.json'].metadata     
+    H3 Tips from our users! 
+    -var restaurants = contents.data['restaurants.json'].metadata[0];
+    each item in contents.data['tips.json'].metadata
         div.row
-            a(href='view/tip.html')
-                = item.text
+            div.nine.columns
+            H4 Thinking about #{restaurants.name} ?
+        div.row
+            div.nine.columns #{item.user_id} had this to say
+            div.two.columns #{item.likes} others found this helpful
+        div.row
+            div.nine.columns #{item.text}

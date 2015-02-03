@@ -1,11 +1,26 @@
 extends layout.jade
 
 block content
+  div#example-grid    
+    div.row(style='font-family:Comic Sans MS;font-size:150%')
+            div.three.columns
+                | Restaurant Name
+            div.one.columns
+                | State
+            div.three.columns
+                | Type
+            div.four.columns
+                | Review
+
     each item in contents.data['restaurants.json'].metadata     
         div.row
-            div.eight.columns
+            div.three.columns
                 a(href='view/restaurant.html')
                     = item.name
+            div.one.columns
+                = item.state
+            div.three.columns
+                = item.type
             div.four.columns
                 = item.stars
                 |  stars
