@@ -3,9 +3,15 @@ extends layout
 block content
     // display the detail of the first item
     - var item = contents.data['tips.json'].metadata[0]
-    div.row
-        div.one.column Tip
-        div.elevent.columns= item.text
-    div.row
-        div.one.column By
-        div.four.column= item.user_id
+    div.blue-container
+        div.white-container
+            div.row
+                div.photo
+                    img.photo(src='images/food1.jpg')
+            div.row
+                div.quote-text= "\""+item.text+"\""
+            div.row
+                div.offset-by-six.columns= "-"+item.user_id
+                div.offset-by-seven.columns= item.date
+                div.offset-by-six.columns
+                    a.business-link(href="view/restaurant.html")= item.business_id

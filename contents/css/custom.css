@@ -19,6 +19,13 @@ img {
 	padding: 2px;
 }
 
+.quote-text {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1.6em;
+    margin: 0 auto;
+    width:80%;
+}
+
 body {
     background-color: yellow;
 }
@@ -39,6 +46,11 @@ body {
 	padding: 10px;
 	margin: 10px;
 	background-color: #19E8FF;
+}
+
+.photo {
+    margin: 0 auto;
+    display:block;
 }
 
 h5.inline {
