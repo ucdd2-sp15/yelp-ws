@@ -1,7 +1,30 @@
 extends layout.jade
 
+- function compareNames(obj1, obj2) {
+-     if(obj1[name] < obj2[name]) {
+-         console.log(obj1[name]);
+-         return -1;
+-     }
+-     if(obj1[name] > obj2[name]) {
+-         return 1;
+-     }
+-     return 0;
+- }
+- var sorted = contents.data['users.json'].metadata.sort(compareNames);
+- console.log(sorted);
+
 block content
-    each item in contents.data['users.json'].metadata     
+    div#example-grid
         div.row
-            a(href='view/user.html')
-                = item.name
+            div.two.columns 
+                b Name
+            div.two.columns 
+                b Average Rating
+        div.row
+        each item in contents.data['users.json'].metadata
+            div.row
+                div.two.columns 
+                    a(href='view/user.html')
+                        = item.name
+                div.two.columns 
+                    = item.average_stars.toFixed(2)
