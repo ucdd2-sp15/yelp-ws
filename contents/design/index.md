@@ -29,7 +29,7 @@ template: index.jade
 
 # List Users
 
-![sketch](list-users-sketch.JPG)
+![sketch](list-users-sketch.jpg)
 
 # View a User
 
