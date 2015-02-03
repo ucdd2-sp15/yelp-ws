@@ -5,6 +5,10 @@ block content
     - var item = contents.data['doctors.json'].metadata[0]
     h3= item.name
     h5= item.full_address
+    div.row
+        div.two.columns Coordinates
+        div.three.columns= "Longitude " + item.longitude
+        div.three.columns= "Latitude " + item.latitude
     div#example-grid
         div.row
             div.two.columns Hours
@@ -17,7 +21,3 @@ block content
         div.row
             div.two.columns= "Reviews: " + item.review_count
             div.two.columns= "Stars: " + item.stars
-        div.row
-            div.two.columns Coordinates
-            div.three.columns= "Longitude " + item.longitude
-            div.three.columns= "Latitude " + item.latitude
