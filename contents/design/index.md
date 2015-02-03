@@ -11,15 +11,20 @@ template: index.jade
 
 # View a Restaurant
 
+![sketch](view-restaurant-sketch.jpg)
+
 # List Doctors
 
 # View a Doctor
 
+![sketch](viewDoctorMockup.jpg)
+
 # List Tips
 
-# View a Tip
+![sketch](list-tips-sketch.png)
 
 # List Users
 
-# View a User
+![sketch](user_design.png)
 
+# View a User
