@@ -28,12 +28,14 @@ body {
 }
 
 .white-container {
+	border-radius: 5px;
 	padding-left: 10px;
 	padding-right: 10px;
 	background-color: white;
 }
 
 .blue-container {
+	border-radius: 5px;
 	padding: 10px;
 	margin: 10px;
 	background-color: #19E8FF;
