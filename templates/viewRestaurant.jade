@@ -12,13 +12,13 @@ block content
     div.row 
         div.three.columns = "image"
     | &nbsp;
-    each item in contents.data['restaurants.json'].metadata
+    each item in contents.data['users.json'].metadata
         div.row
             div.four.columns
-                a(href='view/restaurant.html')
-                    = 'user name'
+                a(href='view/user.html')
+                    = item.name
             div.two.columns 
                 = 'comment/review'
-            div.four.columns
-                = item.stars
-                |  stars
+            div.two.columns(style='color:black')
+                h4 &#10029&#10029&#10029
+                
