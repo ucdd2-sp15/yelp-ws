@@ -1,11 +1,10 @@
 extends layout
 
 block content
-    // display the detail of the first item
-    - var item = contents.data['tips.json'].metadata[0]
-    div.row
-        div.one.column Tip
-        div.elevent.columns= item.text
-    div.row
-        div.one.column By
-        div.four.column= item.user_id
+	// display the detail of the first item
+	- var item = contents.data['tips.json'].metadata[0]
+	div.four.columns Name of Restuarant
+	div#example-grid
+		div.eight.columns= item.text 
+			br
+			span.padded - #{item.user_id}
