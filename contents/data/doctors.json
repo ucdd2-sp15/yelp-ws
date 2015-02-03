@@ -36,7 +36,8 @@
     "attributes": {
         "By Appointment Only": true
     },
-    "type": "business"
+    "type": "business",
+    "img": "doctor.jpeg"
 }, {
     "business_id": "PFO7RF1xz4ZBuaq46KsLpA",
     "full_address": "2332 N Central Ave\nPhoenix, AZ 85004",

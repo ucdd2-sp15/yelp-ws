@@ -1,12 +1,18 @@
 extends layout.jade
 
 block content
+  table.u-full-width
+    thead
+      tr
+        th Restaurant
+        th Stars
+    tbody
     each item in contents.data['restaurants.json'].metadata     
-        div.row
-            div.eight.columns
-                a(href='view/restaurant.html')
-                    = item.name
-            div.four.columns
-                = item.stars
-                |  stars
+      tr
+        td
+          b
+           a(href='view/restaurant.html')
+            =item.name
+          br
+        td= item.stars
 

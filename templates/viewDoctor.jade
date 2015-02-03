@@ -3,9 +3,28 @@ extends layout
 block content
     // display the detail of the first item
     - var item = contents.data['doctors.json'].metadata[0]
-    h3= item.name
-    div.row
-        div.one.column city
-        div.three.columns= item.city
-        div.one.column state
-        div.three.columns= item.state
+    - var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    div#example-grid
+        div.six.columns
+            div.row
+                div.six.column=item.name
+            div.row
+                img(src='design/doctor.jpeg')
+            div.row
+                div.three.columns City:
+                div.three.columns=item.city
+            div.row
+                div.three.columns State:
+                div.three.columns=item.state
+            div.row
+                div.three.columns Stars:
+                div.three.columns=item.stars
+
+        div.six.columns
+            div.row
+                each day in days
+                    if(item.hours[day])
+                        div.row=day
+                            div.three.columns="open: "+item.hours[day].open
+                            div.three.columns="close: "+item.hours[day].close
+
