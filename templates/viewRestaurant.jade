@@ -1,11 +1,28 @@
 extends layout
 
 block content
-    // display the detail of the first item
-    - var item = contents.data['restaurants.json'].metadata[0]
-    h3= item.name
-    div.row
-        div.one.column city
-        div.three.columns= item.city
-        div.one.column state
-        div.three.columns= item.state
+	div.blue-container
+		// display the detail of the first item
+		- var item = contents.data['restaurants.json'].metadata[1]
+		- var address = item.full_address
+		img(width='300' src='images/restaurant_real.png')
+		h4.right-side= item.stars + " Stars"
+		h3= item.name
+		div.right-side
+			h4= "Hours"
+			div.white-container
+				for val, key in item.hours
+					= key + ": " + val.open + " - " + val.close
+					br
+		for parts in item.full_address.split('\n')
+			= parts
+			br
+
+		br
+		br
+
+
+		h5= "Price Range: " + item.attributes["Price Range"]
+		h5= "Takes Reservations: " + item.attributes["Takes Reservations"]
+		h5= "Delivery: " + item.attributes["Delivery"]
+

@@ -1,11 +1,22 @@
 extends layout
 
 block content
-    // display the detail of the first item
-    - var item = contents.data['doctors.json'].metadata[0]
-    h3= item.name
-    div.row
-        div.one.column city
-        div.three.columns= item.city
-        div.one.column state
-        div.three.columns= item.state
+	div.blue-container
+		// display the detail of the first item
+		- var item = contents.data['doctors.json'].metadata[0]
+		h3= item.name
+		img(src = 'images/doctor.png')
+		div.row
+			div.six.columns= item.full_address
+			div.six.columns= item.stars + ' stars'
+		div.row
+			div.six.columns= 'Categories:  ' + item.categories
+			div.six.columns= 'By appointment only?  ' + item.attributes["By Appointment Only"]
+		div.row
+			div.five.columns= 'Open?  ' + item.open
+		div.row
+			for val, key in item.hours		
+				= key + " : " + val.open + "-" + val.close
+				br
+
+

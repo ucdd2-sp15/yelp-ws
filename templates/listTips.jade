@@ -1,7 +1,20 @@
 extends layout.jade
-
 block content
-    each item in contents.data['tips.json'].metadata     
-        div.row
-            a(href='view/tip.html')
-                = item.text
+    div.blue-container
+        div.white-container
+            table.u-full-width
+                thead
+                    tr
+                        th Business Name
+                        th Description
+                        th Likes
+                        th Date
+                tbody
+                    each item in contents.data['tips.json'].metadata
+                        tr
+                            td= item.business_id
+                            td  
+                                a(href='view/tip.html') #{item.text}
+                            td= item.likes
+                            td= item.date
+        

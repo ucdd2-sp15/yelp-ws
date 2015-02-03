@@ -18,3 +18,45 @@ img {
 	border: 1px #aaa solid;
 	padding: 2px;
 }
+
+.quote-text {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1.6em;
+    margin: 0 auto;
+    width:80%;
+}
+
+body {
+    background-color: yellow;
+}
+
+.button {
+   background-color: white;
+}
+
+.white-container {
+	border-radius: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: white;
+}
+
+.blue-container {
+	border-radius: 5px;
+	padding: 10px;
+	margin: 10px;
+	background-color: #19E8FF;
+}
+
+.photo {
+    margin: 0 auto;
+    display:block;
+}
+
+h5.inline {
+    display: inline;
+}
+
+.right-side {
+	float: right;
+}
