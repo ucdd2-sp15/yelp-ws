@@ -11,6 +11,8 @@ template: index.jade
 
 # View a Restaurant
 
+![sketch](view-restaurants-sketch.jpg)
+
 # List Doctors
 
 # View a Doctor
