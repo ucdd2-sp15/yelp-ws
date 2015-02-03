@@ -4,8 +4,10 @@ block content
     each item in contents.data['tips.json'].metadata     
         div.row
             a(href='view/user.html')
-                = item.user_id + ' says "'
+                = item.user_id
+            = ' says "'
             a(href='view/tip.html')
-                = item.text + '" about '
+                = item.text
+            = '" about '
             a(href='view/restaurant.html') 
                 = item.business_id
