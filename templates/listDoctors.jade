@@ -1,11 +1,22 @@
 extends layout.jade
 
 block content
+    div.row
+        div.five.columns Name
+        div.two.columns Open(Y/N)
+        div.four.columns By Appointment Only(Y/N) 
     each item in contents.data['doctors.json'].metadata     
         div.row
-            div.eight.columns
+            div.five.columns
                a(href='view/doctor.html')
                     = item.name
+            div.two.columns
+                if item.open
+                    |Y
+                else
+                    |N
             div.four.columns
                 if (item.attributes["By Appointment Only"])
-                    | By Appointment Only
+                    |Y
+                else
+                    |N
