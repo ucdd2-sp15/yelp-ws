@@ -1,7 +1,23 @@
 extends layout.jade
 
 block content
+    div.row
+        div.three.columns
+            strong= "Name"
+        div.three.columns
+            strong= "Yelping since"
+        div.three.columns
+            strong= "Reviews submitted"
+        div.three.columns
+            strong= "Average rating given"
     each item in contents.data['users.json'].metadata     
         div.row
-            a(href='view/user.html')
-                = item.name
+            div.three.columns
+                a(href='view/user.html')
+                    = item.name
+            div.three.columns
+                = item.yelping_since
+            div.three.columns
+                = item.review_count
+            div.three.columns
+                = item.average_stars

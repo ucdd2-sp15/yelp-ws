@@ -1,11 +1,30 @@
 extends layout.jade
 
 block content
+    div.row
+        div.five.columns
+            strong= "Name"
+        div.two.columns
+            strong= "City"
+        div.one.columns
+            strong= "State"
+        div.one.columns
+            strong= "Stars"
+        div.three.columns
+            strong= "Appointment Required?"
     each item in contents.data['doctors.json'].metadata     
         div.row
-            div.eight.columns
+            div.five.columns
                a(href='view/doctor.html')
                     = item.name
-            div.four.columns
+            div.two.columns
+                = item.city
+            div.one.columns
+                = item.state
+            div.one.columns
+                = item.stars
+            div.three.columns
                 if (item.attributes["By Appointment Only"])
-                    | By Appointment Only
+                    = "Yes"
+                else
+                    = "No"
