@@ -1,12 +1,21 @@
 extends layout
 
 block content
-    // display the detail of the first item
     - var item = contents.data['doctors.json'].metadata[0]
-     h3(style='color: red; text-align: center')= item.name
-    div.row
-        img(src='images/docone.jpg')
-        div.two.column city
-         p= item.city
-        div.two.column state
-        div.two.columns= item.state
+    h3(style='text-align: center')= item.name
+    div.row(style='text-align: center')
+        div.twleve.columns= item.city + ', ' + item.state
+    | &nbsp;
+    div.row(style='text-align: center')
+        img(src='images/doctor.jpg')
+
+    | &nbsp;
+    h4(style='text-align: center; opacity: .5') Reviews
+    each item in contents.data['users.json'].metadata
+        div.row
+            div.three.columns
+                p= item.name
+            div.eight.columns 
+                = 'comment/review'
+            div.one.columns
+                &#10029&#10029&#10029&#10029
