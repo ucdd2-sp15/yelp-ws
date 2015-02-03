@@ -14,6 +14,7 @@ template: index.jade
 ![sketch](list-doctors-sketch.jpg)
 
 # View a Doctor
+![sketch](view-doctor-sketch.jpg)
 
 # List Tips
 
