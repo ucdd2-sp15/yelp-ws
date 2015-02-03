@@ -3,6 +3,50 @@ extends layout
 block content
     // display the detail of the first item
     - var item = contents.data['users.json'].metadata[0]
-    h3= item.name
+    - item.friends = ['Superman', 'Ironman','Hulk']
+    - item.compliments = ['Stud Muffin', 'Good Looking']
+    - item.fans = ['Mommy', 'Daddy']
+    - item.reviews = ['This restaurant sucks', 'I like their apples', 'Monkeys should not be in public places']
     div.row
-        div.three.columns= item.name
+        div.three.columns
+          center
+            // Normally would be pulled randomly from item.compliments
+            h5(class='compliment')= '"' + item.compliments[0] + '"'
+        div.six.columns
+          center
+            h2= item.name
+            img(src='http://img.timeinc.net/time/photoessays/2010/bruce_lee/bruce_lee_01.jpg')
+            p= 'Yelping since: ' + item.yelping_since
+        div.three.columns
+          center
+            h5(class='compliment')= '"' + item.compliments[1] + '"'
+    div.row
+        div.six.columns
+          center
+            h3 Reviews
+            ul
+              each review in item.reviews
+                li
+                  a(href='/yelp-ws/tips.html')=review
+        div.six.columns
+          center
+            h3 Review Stats
+            ul
+              li= 'Review Count: ' + item.review_count
+              li= 'Average Rating: ' + item.average_stars
+    div.row
+        div.six.columns
+          center
+            h3= 'Friends: ' + item.friends.length
+            ul
+              each friend in item.friends
+                li
+                  a(href='/yelp-ws/users.html')=friend
+        div.six.columns
+          center
+            h3= 'Fans: ' + item.fans.length
+            ul
+              each fan in item.fans
+                li
+                  a(href='/yelp-ws/users.html')=fan
+
