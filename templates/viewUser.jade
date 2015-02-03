@@ -7,6 +7,7 @@ block content
     - item.compliments = ['Stud Muffin', 'Good Looking']
     - item.fans = ['Mommy', 'Daddy']
     - item.reviews = ['This restaurant sucks', 'I like their apples', 'Monkeys should not be in public places']
+    - item.pic = 'http://img.timeinc.net/time/photoessays/2010/bruce_lee/bruce_lee_01.jpg'
     div.row
         div.three.columns
           center
@@ -15,7 +16,7 @@ block content
         div.six.columns
           center
             h2= item.name
-            img(src='http://img.timeinc.net/time/photoessays/2010/bruce_lee/bruce_lee_01.jpg')
+            img(src=item.pic)
             p= 'Yelping since: ' + item.yelping_since
         div.three.columns
           center
