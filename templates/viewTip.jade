@@ -1,11 +1,16 @@
 extends layout
 
 block content
-    // display the detail of the first item
-    - var item = contents.data['tips.json'].metadata[0]
-    div.row
-        div.one.column Tip
-        div.elevent.columns= item.text
-    div.row
-        div.one.column By
-        div.four.column= item.user_id
+	// display the detail of the first item
+	- var item = contents.data['tips.json'].metadata[0]
+	- item.pic = 'http://www.ochrerestaurant.com.au/highres_images/ochre_outside.jpg?206ab1'
+	br
+	h3= item.business_id
+	div.row
+		div.four.columns
+			img(src=item.pic)
+		div.eight.columns 
+			br
+			p= item.text
+			p= "By " + item.user_id + " on " + item.date
+			p= "Likes: " + item.likes

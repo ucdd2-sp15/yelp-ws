@@ -1,11 +1,46 @@
 extends layout
 
 block content
-    // display the detail of the first item
-    - var item = contents.data['restaurants.json'].metadata[0]
-    h3= item.name
-    div.row
-        div.one.column city
-        div.three.columns= item.city
-        div.one.column state
-        div.three.columns= item.state
+	// display the detail of the first item
+	- var item = contents.data['restaurants.json'].metadata[1]
+	h3= item.name
+	h5= item.stars + ' stars | ' + item.review_count + ' reviews'
+	div.row
+		div.five.columns
+			=item.full_address
+			br
+			br
+			if item.open
+				="Open now"
+			else
+				= "Closed now"
+			br
+			h5= "Hours:"
+			for val, index in item.hours
+				div.row
+					div.one.column
+					div.three.columns
+						b= index
+					div.five.columns= val.open + " - " + val.close
+		div.four.columns
+			img(src= 'images/' + item.image)
+	br
+	div.row
+		div.seven.columns
+			h5= "More business info:"
+			for val, index in item.attributes
+				div.row
+					div.one.column
+					div.five.columns
+						b= index	
+					if typeof(val)=="object"				
+						for val2, index2 in val
+							if val2==true
+								span.button=index2
+					else if val==true
+						= "Yes"
+					else if val==false
+						= "No"
+					else
+						span.button= val
+	br
