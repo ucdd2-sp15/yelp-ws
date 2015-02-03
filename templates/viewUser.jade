@@ -1,8 +1,43 @@
 extends layout
 
 block content
-    // display the detail of the first item
-    - var item = contents.data['users.json'].metadata[0]
-    h3= item.name
-    div.row
-        div.three.columns= item.name
+
+    - var item = contents.data['users.json'].metadata[1]
+
+    div.blue-container
+
+        div.row
+
+            div.four.columns
+
+                img(height='200' width='200' src='images/' + "user1.png")
+
+            div.six.columns
+
+
+
+                h4= item.name
+
+                h5.inline Yelping since:
+                p= item.yelping_since
+                h5.inline Average stars:
+                p= item.average_stars
+                h5.inline Review counts:
+                p= item.review_count
+
+
+
+        div.row
+
+            div.ten.column
+
+                img(height='100' width='100' src='images/' + "user.png")
+                img(height='100' width='100' src='images/' + "user1.png")
+                img(height='100' width='100' src='images/' + "user1.png")
+                img(height='100' width='100' src='images/' + "user1.png")
+                
+
+        div.row
+
+            div.ten.column
+                = item.friends
