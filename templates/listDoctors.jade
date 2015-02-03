@@ -1,11 +1,26 @@
 extends layout.jade
 
 block content
-    each item in contents.data['doctors.json'].metadata     
-        div.row
-            div.eight.columns
-               a(href='view/doctor.html')
-                    = item.name
-            div.four.columns
-                if (item.attributes["By Appointment Only"])
-                    | By Appointment Only
+	div.blue-container
+		div.white-container
+			table.u-full-width
+				thead
+					tr
+						th Name
+						th State
+						th City
+						th Rating
+						th Open
+				tbody
+				each item in contents.data['doctors.json'].metadata
+					tr
+						td
+							a(href='view/restaurant.html')
+								= item.name
+						td= item.state
+						td= item.city
+						td= item.stars + " Stars"
+						if item.open
+							td= "Open"
+						else
+							td= "Closed"
