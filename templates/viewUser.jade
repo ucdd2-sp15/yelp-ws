@@ -4,5 +4,51 @@ block content
     // display the detail of the first item
     - var item = contents.data['users.json'].metadata[0]
     h3= item.name
-    div.row
-        div.three.columns= item.name
+    div#example-grid
+        div.row
+            div.two.columns 
+                b Yelping Since:
+            div.three.columns= item.yelping_since
+        div.row
+            div.two.columns 
+                b Votes
+            div.three.columns
+                div.row
+                    div.five.columns Funny:
+                    div.three.columns= item.votes.funny
+                div.row
+                    div.five.columns Useful:
+                    div.three.columns= item.votes.useful
+                div.row
+                    div.five.columns Cool:
+                    div.three.columns= item.votes.cool
+        div.row 
+            div.two.columns
+                b Reviews
+            div.three.columns= item.review_count
+        div.row 
+            div.two.columns
+                b Fans
+            div.three.columns= item.fans
+        div.row 
+            div.two.columns
+                b Average Rating
+            div.three.columns= item.average_stars
+        div.row 
+            div.two.columns
+                b Friends
+            div.three.columns
+                div.row
+                    div.five.columns friend1...
+                    div.five.columns friend2...
+                div.row
+                    div.five.columns friend3...
+                    div.five.columns friend4...
+        div.row 
+            div.two.columns
+                b Compliments
+            div.eight.columns
+                div.row
+                    div.twelve.columns compliment1...
+                div.row
+                    div.twelve.columns compliment2...
