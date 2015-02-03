@@ -26,4 +26,4 @@ template: index.jade
 ![sketch](list-users-sketch.jpg)
 
 # View a User
-
+![sketch](view-user-sketch.jpg)
