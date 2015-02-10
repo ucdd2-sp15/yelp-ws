@@ -1,11 +1,21 @@
 extends layout.jade
 
-block content
-    each item in contents.data['doctors.json'].metadata     
+block content    
         div.row
-            div.eight.columns
-               a(href='view/doctor.html')
-                    = item.name
             div.four.columns
-                if (item.attributes["By Appointment Only"])
-                    | By Appointment Only
+                br
+            div.six.columns
+                br
+                h1 Doctors
+                br
+        each item in contents.data['doctors.json'].metadata
+            div.row
+                div.two.columns
+                    img(src='images/' + item.image)
+                div.three.columns
+                    a(href='view/doctor.html')
+                        = item.name
+                div.three.columns
+                    =item.city +', '+item.state
+                div.four.columns(style='color: gold')
+                    h5 &#10029&#10029&#10029&#10029
